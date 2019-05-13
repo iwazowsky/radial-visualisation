@@ -6,7 +6,13 @@
 	<style>
 		body
 		{
+
+			background: #ccc;
 			margin:10px;
+		}
+		canvas { 
+			height: 2000px;
+			width: 2000px;
 		}
 	</style>
 </head>
@@ -14,8 +20,12 @@
 	
 	<input type="number" placeholder="Multiplier" id="multiplier">
 	<input type="number" placeholder="Number of points" id="points">
-	<button id="start">Visualise</button>
-	<canvas id='mandelbrot' width=2000   height=2000></canvas>
+	<!-- <button id="start">Visualise</button> -->
+	<h4>Multiplier:</h4><h3></h3>
+	<canvas id='mandelbrot' width=5000   height=5000 ></canvas>
+
+	<script src="drawer.js"></script>
+	<script src="radial.js"></script>
+	<script src="main.js"></script>
 </body>
-<script src="drawer.js"></script>
 </html>
