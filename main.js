@@ -7,10 +7,10 @@ const quantity = document.getElementById('points');
 // quantity.addEventListener('change',function(){
 	// q = this.value;
 // })
-let	m = 421, q = 3000,sin=88, cos= 88,lineWidth=0.4;
+let	m = 421, q = 1000,sin=88, cos= 88,lineWidth=0.6;
 let skip = 	false;
 setInterval(()=>{
-	// m+=9
+	m+=0.01
 	// q+=1
 	// if(skip){
 	// 	m+=1
@@ -19,8 +19,8 @@ setInterval(()=>{
 	// 	skip = true
 	// }
 		
-	sin+=0.004
-	cos+=0.004
+	// sin+=0.002
+	// cos+=0.004
 	// q+=2
 	new Radial(m,q,sin,cos,lineWidth);
 },1000/24)
