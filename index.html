@@ -18,19 +18,19 @@
 			height: 100vh;
 			width: 100vh;
 		}
+
+		#message,
+		#dl {
+			color: white
+		}
 	</style>
+	<!-- <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.10.0/dist/ffmpeg.min.js"></script> -->
+
 </head>
 
 <body>
-
-	<!-- <input type="number" placeholder="Multiplier" id="multiplier"> -->
-	<!-- <input type="number" placeholder="Number of points" id="points"> -->
-	<!-- <button id="start">Visualise</button> -->
-	<!-- <h4>Multiplier:</h4> -->
-	<!-- <h3></h3> -->
-	<canvas id='mandelbrot' width=2000 height=2000></canvas>
-	<script src="https://unpkg.com/@ffmpeg/ffmpeg@0.8.1/dist/ffmpeg.min.js"></script>
-
+	<!-- <button id="stoprecord">Stop recording</button> -->
+	<canvas id='mandelbrot' width=1080 height=1080></canvas>
 
 	<!-- <video id="myVideo" controls="controls"></video> -->
 	<!-- <video id="output-video" controls="controls"></video> -->
@@ -38,11 +38,15 @@
 	<!-- <a id="dl" href="" download="download.mp4"></a> -->
 
 	<!-- <div id="message"></div> -->
-	<script src="https://cdn.webrtc-experiment.com/MediaStreamRecorder.js"> </script>
+	<script>
+		const canvas = document.getElementById('mandelbrot')
+
+	</script>
+	<script src="webMidi.js"></script>
 	<script src="drawer.js"></script>
 	<script src="radial.js"></script>
 	<script src="main.js"></script>
-	<script src="record.js"></script>
+	<!-- <script src="record.js"></script> -->
 </body>
 
 </html>

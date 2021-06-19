@@ -1,8 +1,7 @@
 class Radial extends Drawer{
-	x0 		  = 1000;
-	y0 		  = 1000;
-	r 		  = 922;
-	// r 		  = 960;
+	x0 		  = canvas.width/2;
+	y0 		  = canvas.height/2;
+	r 		  = canvas.height/2 - 50;
 	constructor(multiplier,dots,sin=2, cos=2,lineWidth=0.2){
 		super();
 		this.multiplier = multiplier;
@@ -18,9 +17,10 @@ class Radial extends Drawer{
 	}
 
 	getPoint(index) {
-		const angle = this.map(index % this.dots, 0, this.dots, 0,2*Math.PI);
-		let x = this.x0 + this.r * Math.cos(angle + this.cos*Math.PI);
-		let y = this.y0 - this.r * Math.sin(angle + this.sin*Math.PI);
+		const x_angle = this.map(index % this.dots, 0, this.dots, 0,this.cos*Math.PI);
+		const y_angle = this.map(index % this.dots, 0, this.dots, 0,this.sin*Math.PI);
+		let x = this.x0 + this.r * Math.cos(x_angle );
+		let y = this.y0 - this.r * Math.sin(y_angle );
 		return {x,y}  
 	}
 
