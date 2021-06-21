@@ -9,8 +9,9 @@ const quantity = document.getElementById('points');
 // })
 let	m = 421, q = 1000,sin=88, cos= 88,lineWidth=0.6;
 let skip = 	false;
+const mLFO = lfo(2,0,2)
 setInterval(()=>{
-	m+=0.01
+	m = mLFO()
 	// q+=1
 	// if(skip){
 	// 	m+=1
