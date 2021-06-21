@@ -6,7 +6,7 @@ class Drawer{
                this.ctx.fillStyle = 'black';
 		this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);        
         this.colors = ['#ffffff'];
-        // this.colors = ['#1a1083', '#0a1356',  '#79d24b',  '#a9049a',  '#000000'];
+        // this.colors = ['#1a1083', '#ffffff',  '#79d24b',  '#a9049a',  '#000000'];
     }
 
     set line_width(w){
